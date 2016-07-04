@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fTW-eO-x4P">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="zcK-BX-dUc">
+                                <rect key="frame" x="20" y="278" width="560" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="aFn-ZD-ed6"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="zcK-BX-dUc" secondAttribute="trailing" id="8Zf-a8-I64"/>
+                            <constraint firstItem="zcK-BX-dUc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="C0s-lM-dQC"/>
+                            <constraint firstItem="zcK-BX-dUc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ENc-Sf-vvh"/>
+                            <constraint firstItem="zcK-BX-dUc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z2u-N5-mQG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="awb-gs-5wt"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="cfN-nS-Ool" id="ij5-Qh-MzM"/>
+                        <outlet property="storyBoardSearchbar" destination="zcK-BX-dUc" id="Qaj-ay-fmg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="cfN-nS-Ool">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="xJS-wZ-DjM"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="0BH-gp-T81"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="Ukg-at-ULE"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="Lkf-jp-5MZ"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1013" y="681"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LcR-II-hmS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fTW-eO-x4P" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2c5-7m-oh4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vFy-2A-juu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NoD-qh-2Fo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="192" y="1089"/>
+        </scene>
+    </scenes>
+</document>
